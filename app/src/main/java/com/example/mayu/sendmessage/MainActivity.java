@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 String contact=phonetx.getText().toString();
                 try {
                     Uri uri = Uri.parse("smsto:" +contact);// No permisison needed
-                    Intent smsIntent = new Intent(Intent.ACTION_SENDTO, uri);// Set the message to be sent
+                    Intent smsIntent = new Intent(Intent.ACTION_SENDTO, uri);// Set the message to be sent to the contacted person
                     smsIntent.putExtra("sms_body", message);
                     startActivity(smsIntent);
                 }
